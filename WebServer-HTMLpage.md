@@ -33,3 +33,7 @@ First, let’s find the location of this HTML file on the Raspberry Pi. Enter th
 Step 2
 
 Then type the following command to list all the files in this directory
+
+    ls -al
+
+
