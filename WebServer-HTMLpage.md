@@ -36,4 +36,23 @@ Then type the following command to list all the files in this directory
 
     ls -al
 
+We need to change the ownership of the file "index.html" to your own username. Here we will choose the default username of the Raspberry Pi which is “pi” for example.
+
+    sudo chown pi: index.html
+    
+Now you are able to edit this file and once you save the file after editing, you just need to refresh your browser to see the changes.
+![02](https://github.com/Binzv/Raspberry-pi-zero/assets/51468189/7d8c070e-52b8-4df0-abba-158da8a2e617)
+
+### 4. Building your first HTML page
+
+First of all, open the index.html file by entering the command below and delete all the content inside to start with a fresh page.
+
+    sudo nano index.html
+![01](https://github.com/Binzv/Raspberry-pi-zero/assets/51468189/293ffa3d-32ae-49f4-a5cf-058f8c6cd4f3)
+
+Paste the following code for "Digital Clock"
+
+        
+
+
 
