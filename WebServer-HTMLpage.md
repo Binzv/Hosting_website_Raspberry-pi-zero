@@ -50,9 +50,70 @@ First of all, open the index.html file by entering the command below and delete 
     sudo nano index.html
 ![01](https://github.com/Binzv/Raspberry-pi-zero/assets/51468189/293ffa3d-32ae-49f4-a5cf-058f8c6cd4f3)
 
-Paste the following code for "Digital Clock"
+### Use the following code as referance along with styles.css and script.js files  for "Digital Clock" index.html file
 
-        
+
+    <!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <title>Digital Clock</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+        <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Orbitron'>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Aldrich'>
+        <link rel="stylesheet" href="styles.css" />
+      </head>
+      <body>
+        <div id="MyClockDisplay" class="clock" onload="showTime()"></div>
+      
+    <script src="script.js"></script>
+    
+ 
+    </div>
+    
+    
+      </body>
+    </html>
+    
+
+
+
+
+
+### Use the following code for script.js file.
+
+    function showTime(){
+      var date = new Date();
+      var h = date.getHours(); // 0 - 23
+      var m = date.getMinutes(); // 0 - 59
+      var s = date.getSeconds(); // 0 - 59
+      var session = "AM";
+    
+      if(h == 0){
+          h = 12;
+      }
+    
+      if(h > 12){
+          h = h - 12;
+          session = "PM";
+      }
+    
+      h = (h < 10) ? "0" + h : h;
+      m = (m < 10) ? "0" + m : m;
+      s = (s < 10) ? "0" + s : s;
+    
+      var time = h + ":" + m + ":" + s + " " + session;
+      document.getElementById("MyClockDisplay").innerText = time;
+      document.getElementById("MyClockDisplay").textContent = time;
+    
+      setTimeout(showTime, 1000);
+    }
+    
+    showTime();
+
+
+
+
 
 
 
