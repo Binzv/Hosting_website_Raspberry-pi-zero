@@ -52,7 +52,6 @@ First of all, open the index.html file by entering the command below and delete 
 
 ### Use the following code as referance along with styles.css and script.js files  for "Digital Clock" index.html file
 
-
     <!DOCTYPE html>
     <html lang="en">
       <head>
@@ -65,23 +64,29 @@ First of all, open the index.html file by entering the command below and delete 
       </head>
       <body>
         <div id="MyClockDisplay" class="clock" onload="showTime()"></div>
-      
-    <script src="script.js"></script>
-    
- 
-    </div>
-    
-    
+        <script src="script.js"></script>
       </body>
     </html>
+  
     
+### Use the following code for styles.css [nano styles.css]
+    body {
+      background: black;
+    }
+    
+    .clock {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%) translateY(-50%);
+      color: #17D4FE;
+      font-size: 60px;
+      font-family: Orbitron;
+      letter-spacing: 7px;
+    }
 
 
-
-
-
-### Use the following code for script.js file.
-
+### Use the following code for script.js file. [ nano script.js]
     function showTime(){
       var date = new Date();
       var h = date.getHours(); // 0 - 23
@@ -111,9 +116,10 @@ First of all, open the index.html file by entering the command below and delete 
     
     showTime();
 
+### Final Output
 
 
-
+https://github.com/Binzv/Raspberry-pi-zero/assets/51468189/c8051f74-5bb3-4282-b2e5-d48d259805cc
 
 
 
